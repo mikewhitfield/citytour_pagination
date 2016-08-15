@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+		<!-- Title -------------------------------------------------------------- -->
+        <title></title>
+		<!-- Mobile -------------------------------------------------------------- -->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Links -------------------------------------------------------------- -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Scripts -------------------------------------------------------------- -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD5qvL7PHHUvyuTh96SmVX8idWGDqY4Mr4&sensor=true"></script>				
+    </head>
+
+<body>
+			<div id="page">
+			<header id="heading">
+			   <!-- Sign in -->
+				<div class="sign-in">
+					<a href="sign-in.html">Sign In</a>
+					<span>Cart</span>
+				</div>
+				<!--End Sign in -->
+				<div class="logo-nav">
+					<a href="prototype/city-tour/" class="logo"><span>City Tour</span></a><!-- Logo -->
+					
+					<!-- Navigation -->
+					<nav  class="nav-header">
+							<a class="mobile_menu" title="menu" href="#"></a>
+							<ul>
+								<li><a href="tours.html">Tours</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+					</nav>
+					<!--End Navigation-->
+				</div>
+				
+				<!-- Brief -->
+				<div class="brief">
+					<h1>Paris Tours</h1>
+					<span class="tour-types">City Tours/Tour tickets/ Tour guides</span>
+					<a href="#">View Tours</a><a href="#">View Tickets</a>
+				</div>
+				<!-- End Brief-->
+			</header>
+			<div id="bread-crumb"><span>Home > Tours</span></div>
+			<section id="map">
+				<div id="googleMap" ></div>
+			</section>
+			
+			<section id="content">
+				<aside class="left-menu">
+					<nav>
+						<div class="top-side-menu">
+							<ul>
+								<li class="nav-all">All tours</li>
+								<li class="nav-sight">City sightseeing</li>
+								<li class="nav-tour">Museum tours</li>
+								<li class="nav-build">Historics buildings</li>
+								<li class="nav-walk">Walking tours</li>
+								<li class="nav-eat">Eat & Drink</li>
+								<li class="nav-chur">churches</li>
+								<li class="nav-sky">Skyline tours</li>
+								<li class="nav-shop">Shopping tours</li>
+							</ul>						
+						</div>
+					</nav>	
+					
+					<div class="filters">
+						<form>
+							<span>Filters</span>
+							<div class="price-filter">	
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" > From $10 to $50</label>
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" > From $10 to $50</label>
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" > From $10 to $50</label>
+							</div>
+							<div class="star-filter">
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" > <img src="img/5star.gif"/></label>
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" > <img src="img/4star.gif"/></label>
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" ><img src="img/3star.gif"/></label>
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" ><img src="img/2star.gif"/></label>
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" ><img src="img/1star.gif"/></label>
+							</div>
+							<div class="allowed-filter">
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" > Pets allowed</label>
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" > Groups allowed</label>
+								<label><input type="checkbox" id="cbox_1" value="below_fifty" > Tour guides</label>
+							</div>
+						</form>						
+					</div>
+					
+					<div class="side-support">
+						<img src="img/support_guy.gif"/>
+						<span class="help">Need <span class="pink">Help?</span></span>
+						<span class="tel">630 888 2000</span>
+						<span class="hours">Monday though Friday 9:00 AM to 7:30 PM</span>
+					</div>
+				</aside><!-- side navigation -->
+				<div class="tour-list">
+					<div class="pagination">
+					<a href="#" class='page-left'>left</a>
+					<a href="#" class='pag-right'>Right</a>   
+					</div> <!--pagination -->
+					
+					<section id="talktitles" class="tour-detail"></section>
+					
+					<div class="pagination">
+					<a href="#" class='page-left'>left</a>
+					<a href="#" class='pag-right'>Right</a>   
+					</div> <!--pagination -->
+										
+					<script id="speakers-template" type="text/template">						
+					{{#d}}
+					<article class="map_tour_info" data-id="{{title}}" data-shownum="">
+					
+					
+					<figure><img scr="{{tour_img}}" alt="{{tour_img_alt}}"/><a href="#">{{Building_type}}</a></figure>
+					
+					<div class="detail-info">
+						<h3><strong>{{tour_name}}</strong> Tour</h3>
+						<p>{{summary}}</p>
+						<a href="#" class="tour-map"><span>map icon</span></a>
+						<a href="#" class="tour-clock"><span>clock icon</span></a>
+						<a href="#" class="tour-speakr"><span>speaker icon</span></a>
+						<a href="#" class="tour-train"><span>train icon</span></a>
+					</div>
+					
+					<div class="detail-price">
+					<span class="big-price"><strong>{{tour_price}}</strong></span><!-- use after and befor to put in $ and * -->
+					<span class="small-price">99</span>
+					<span>*Per Person</span>
+					<a href="#" >Details</a>
+					</div>
+					</article>
+					{{/d}}					
+					</script>							
+				</div>
+			</section>
+			
+	            <footer>
+			<div class="footer-page">				
+				<article>
+					<h4>Need help?</h4>
+					<ul>
+						<li> 1 630 888 2000</li>
+						<li>help@citytours.com</li>
+					</ul>
+				</article>	
+				
+				<article>
+					<h4>About</h4>
+					<ul>
+						<li>Who we are</li>
+						<li> Blob </li>
+						<li>Help - FAQ</li>
+						<li>Terms and conditions</li>
+						<li>Privacy Policy</li>
+					</ul>
+				</article>
+				
+				<article>
+					<h4>Discover</h4>
+					<ul>
+						<li>City tours</li>
+						<li>Museum tours</li>
+						<li>Historics buildings</li>
+						<li>Walking tours</li>
+						<li>Eat & Drink</li>
+					</ul>
+				</article>
+			</div>
+	            </footer>
+		</div>
+
+
+  
+
+
+	
+	<script type="text/javascript" src="js/vendor/mustache.js"></script>
+	<script src="js/vendor/jquery-1.11.2.min.js"></script>	
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

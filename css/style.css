@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+
+
+/* #Genreal
+================================================== */
+body {
+        background: #fff url(../img/paris_bg.jpg) no-repeat 0 0 fixed;
+	font-family: 'Lato', sans-serif; 	
+	font-size: 16px; 
+	font-weight: 400; 
+	background-color:#ebeadc;
+	color: #555; 
+	margin: 0; 
+	padding: 0;
+}
+
+h1, h2, h3, h4 {color: #3d3d3d;}
+
+h1 {margin: 0 0 .2em 0; font-size: 2.8em; font-weight: 700;}
+h2 {margin: 0 0 .5em 0; font-size: 1.6em;  line-height: 1.1em;}
+h3 {margin: 0 0 .5em 0; font-size: 1.3em; }
+h5 {margin: 0 0 1.5em 0; font-size: 1em; font-weight: 700; }
+a   {text-decoration:none;}
+
+.pink {color:#e04c66;}
+
+/* #Header
+================================================== */
+header::after{content:''; display:block; clear:both; }
+nav::after{content:''; display:block; clear:both; }
+div.sign-in::after{content:''; display:block; clear:both; }
+
+header { background-color:#535353; margin-top:30px; padding-bottom:50px;}
+
+div.sign-in {float:right; width:15%; margin-right:50px;}
+div.sign-in a, div.sign-in span {display:inline-block; width:50%; float:left; color:#fff; font-size:.8em;}
+
+div.logo-nav {clear:both; border:1px solid #757575;}
+
+.logo{background:url(../img/logo.gif) no-repeat; padding:30px 70px; margin-top:10px; display:block; width:200px; float:left;}
+.logo span {display:none;}
+
+#heading nav {
+    position: relative;
+    padding: 10px 0 20px 0;
+    float:right;
+    height:auto;
+    width:400px;
+}
+
+#heading nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#heading nav li {
+    float: left;
+}
+
+#heading nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;
+    position: relative;
+}
+
+.brief {width:60%; margin:0 auto; text-align:center; clear:both;}
+.brief h1 {color:#fff; text-transform:uppercase;}
+.brief .tour-types {color:#fff; display:block; margin-bottom:40px;}
+.brief a {
+color:#fff; 
+font-weight:bold; 
+padding:10px 20px; 
+border:1px solid #fff;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+margin:0 20px;
+}
+
+
+/* #Tour
+================================================== */
+#content {background-color:#fff; padding:0 2.5%;}
+#content::after{content:''; display:block; clear:both; }
+#content div.tour-list {float:right; width:75%;}
+
+div#googleMap {width:100%; height:300px;}
+div#page{width:1000px; margin:0 auto;}
+div#bread-crumb {background-color:#333333; padding:7px 0; padding-left:50px;}
+div#bread-crumb span {color:#fff;}
+
+/* #Left Nav
+================================================== */
+#content aside {float:left; width:20%; padding-bottom:50px; }
+
+.top-side-menu ul {list-style:none; padding:0; margin:20px 0; }
+.top-side-menu li:first-child {border-top:1px solid #ccc;}
+.top-side-menu li {
+border-left:1px solid #ccc;
+border-right :1px solid #ccc;
+border-bottom:1px solid #ccc;
+padding:5px 10px;
+}
+
+div li.nav-all {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat;}
+div li.nav-sight {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat 0 -50px;}
+div li.nav-tour {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat 0 -100px ;}
+div li.nav-build {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat 0 -150px;}
+div li.nav-walk {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat 0 -200px;}
+div li.nav-eat {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat 0 -250px;}
+div li.nav-chur {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat 0 -300px;}
+div li.nav-sky {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat 0 -345px;}
+div li.nav-shop {padding-left:40px; background:url(../img/sidebar-icons.gif) no-repeat 2px -395px;}
+
+div.star-filter label {display:block;}
+div.filters {border:1px solid #ccc; padding:0 10px;}
+div.filters div {border-bottom:1px solid #ccc; padding:25px 0;}
+div.filters span { 
+margin:10px 0; 
+padding-left:40px; padding-bottom:10px;
+background:url(../img/cog.gif) no-repeat 10px 0 ;
+border-bottom:1px solid #ccc; 
+display:block;
+}
+
+div.side-support {border:1px solid #ccc; padding:10px; text-align:center; margin-top:15px;}
+div.side-support img, div.side-support span {display:block;}
+div.side-support img {width:60px; margin:0 auto;}
+div.side-support .help {font-size:1.2em; color:#000; padding-bottom:10px;}
+div.side-support .help span {display:inline-block;}
+div.side-support .tel {font-size:1.5em; color:#05baf3; padding-bottom:15px;}
+
+/* #Tour Information 
+================================================== */
+.tour-list::after{content:''; display:block; clear:both; }
+.tour-detail {margin-top:35px;}
+
+.pagination {float:right; margin-top:10px;}
+.pagination a {font-size:1.1em; color:#0080FF; margin:0 3px;}
+
+article.map_tour_info {border:1px solid #e6e6e6; margin-bottom:20px;}
+article.map_tour_info::after{content:''; display:block; clear:both; }
+
+figure, .detail-info {float:left;}
+figure {width:25%; height:200px; background-color:#ccc;}
+
+div.detail-info {width:55%; padding:2.5% 2.5% 0 2.5%;}
+div.detail-info h3 {font-size:1.1em; text-transform:uppercase; font-weight:400;}
+div.detail-info h3 strong {font-weight:700;}
+div.detail-info a {display:inline-block; width:40px;  padding:20px 1px; margin:0 5px; border:1px solid #ccc;}
+div.detail-info a span {display:none;}
+
+div.detail-info a.tour-map{background:url(../img/map.gif) no-repeat center;}
+div.detail-info a.tour-clock{background:url(../img/clock.gif) no-repeat center;}
+div.detail-info a.tour-speakr{background:url(../img/speaker.gif) no-repeat center;}
+div.detail-info a.tour-pframe{background:url(../img/pframe.gif) no-repeat center;}
+div.detail-info a.tour-train{background:url(../img/train.gif) no-repeat center;}
+
+div.detail-price{width:20%; padding:2.5%; text-align:center; float:right;}
+div.detail-price span {display:block;} 
+div.detail-price a {
+background-color:#0080FF; 
+padding:7px 15px; 
+color:#fff; 
+font-weight:bold;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+}
+
+.big-price {font-size:2em; font-weight:700; color:#e74c3c;}
+.big-price::before{content: '\0024'; }
+.small-price::before{content: '\0024'; }
+.small-price {font-size:1.2em; font-wieght:400; color:#ccc; text-decoration:line-through;}
+.small-price + span {margin-bottom:20px;}
+
+
+/* footer
+================================================== */
+footer {background:#535353; color:#fff; margin-bottom:50px; padding:30px 0;}
+footer h4 {color:#fff;}
+footer::after{content:''; display:block; clear:both; }
+
+div.footer-page {width:80%; margin:0 auto; }
+div.footer-page article {width:30%; padding:0 1.5%; float:left;}
+
+
+
